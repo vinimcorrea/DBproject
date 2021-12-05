@@ -1,18 +1,18 @@
 DROP TABLE IF EXISTS Pessoa;
 CREATE TABLE Pessoa(
 	idPessoa INTEGER PRIMARY KEY, 	
-	nome VARCHAR(30), 
+	nome VARCHAR(30) NOT NULL, 
 	altura INTEGER, 
 	genero CHAR(1) CHECK (genero in ('M', 'F')), 
 	peso REAL, 
-	nacionalidade VARCHAR(20)
+	nacionalidade VARCHAR(20) NOT NULL
 );
 
 DROP TABLE IF EXISTS ComitivaOlimpica;
 CREATE TABLE  ComitivaOlimpica(
 	idComitiva INTEGER PRIMARY KEY, 
 	pais VARCHAR(30)  NOT NULL, 
-	desporto VARCHAR(15)  CHECK (desporto in ('Triatlo'))	
+	desporto VARCHAR(15)  CHECK (desporto in ('Triatlo')) NOT NULL	
 );
 
 DROP TABLE IF EXISTS Tecnico;
@@ -30,9 +30,10 @@ CREATE TABLE Arbitro(
 
 DROP TABLE IF EXISTS Atleta;
 CREATE TABLE Atleta(
+	idAtleta INTEGER PRIMARY KEY,
 	idComitiva REFERENCES ComitivaOlimpica, 
-	idAtleta REFERENCES Pessoa,
-	PRIMARY KEY(idAtleta, idComitiva)
+	idPessoa REFERENCES Pessoa,
+	idCompeticao REFERENCES Competicao
 );
 
 DROP TABLE IF EXISTS Prova;
@@ -45,31 +46,39 @@ CREATE TABLE Prova(
 DROP TABLE IF EXISTS Ocorrencia;
 CREATE TABLE Ocorrencia(
 	idOcorrencia INTEGER PRIMARY KEY, 
-	minuto TIME, 	
-	descricao TEXT
+	tempo TEXT, 	
+	descricao TEXT DEFAULT 'Sem Descrição'
 );
 
 DROP TABLE IF EXISTS Cartao;
 CREATE TABLE Cartao(	
-	coID REFERENCES Ocorrencia, 
-	caID REFERENCES Pessoa, 
+	IDCartao REFERENCES Ocorrencia, 
+	IDAtleta REFERENCES Atleta, 
 	cor VARCHAR(10) CHECK(cor in ('Amarelo', 'Vermelho')), 
-	PRIMARY KEY(coID, caID)
+	PRIMARY KEY(IDCartao, IDAtleta)
 );
 
 DROP TABLE IF EXISTS Medalha;
 CREATE TABLE Medalha(
-	idCartao REFERENCES Ocorrencia, 
-	idAtleta REFERENCES Atleta, 
+	IDMedalha REFERENCES Ocorrencia, 
+	IDAtleta REFERENCES Atleta, 
 	tipo  VARCHAR(10) CHECK(tipo in ('Bronze', 'Prata', 'Ouro')), 
-	PRIMARY KEY(idAtleta, idCartao)
+	PRIMARY KEY(IDMedalha, IDAtleta)
 );
 
 DROP TABLE IF EXISTS Desistencia;
 CREATE TABLE Desistencia(
-	idDesistencia REFERENCES Ocorrencia, 
-	idAtletaComitiva REFERENCES Atleta,
-	PRIMARY KEY(idAtletaComitiva, idDesistencia)
+	iDesistencia REFERENCES Ocorrencia, 
+	iDAtleta REFERENCES Atleta,
+	PRIMARY KEY(IDesistencia, IDAtleta)
+);
+
+
+DROP TABLE IF EXISTS Competicao;
+CREATE TABLE Competicao(
+	IDCompeticao INTEGER PRIMARY KEY, 
+	data TEXT,
+	genero VARCHAR(1) CHECK(genero in ('M','F'))
 );
 
 DROP TABLE IF EXISTS Olimpiada;
@@ -84,10 +93,12 @@ CREATE TABLE Olimpiada(
 
 DROP TABLE IF EXISTS Participacao;
 CREATE TABLE Participacao(
-	idParticipacao REFERENCES Ocorrencia, 
 	idAtleta REFERENCES Atleta, 
-	tempo TIME,
-	PRIMARY KEY(idAtleta, idParticipacao)
+	TempoNatacao TEXT DEFAULT '-',
+	TempoCiclismo TEXT DEFAULT '-',
+	TempoCorrida TEXT DEFAULT '-',
+	TempoTotal TEXT DEFAULT '-',
+	posicao VARCHAR(3) DEFAULT '-'
 );
 
 DROP TABLE IF EXISTS ComissaoTecnica;
