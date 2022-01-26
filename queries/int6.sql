@@ -1,10 +1,6 @@
-.bail ON
-.mode columns
-.headers ON
-.nullvalue NULL
+-- 6.	Listar as atletas da competição feminina.
 
--- 6. Atletas da competição feminina.
-SELECT Nome as Atletas
+SELECT Nome as AtletasFemininas
 FROM Pessoa, Atleta
 WHERE IdPessoa = IdAtleta 
 AND IdCompeticao like '%502%'

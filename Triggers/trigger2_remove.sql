@@ -1,0 +1,2 @@
+DROP TRIGGER IF EXISTS InsertIdadeMinima;
+DROP TRIGGER IF EXISTS UpdateIdadeMinima;

@@ -1,63 +1,68 @@
+.bail on
+.mode columns
+.header on
+.nullvalue NULL
+
 PRAGMA foreign_keys = ON;
 
-INSERT INTO Pessoa VALUES(1, 'Jonathan Brownlee', 180, 'M', 78.4, 34, 'Britânica');
-INSERT INTO Pessoa VALUES(2, 'Alistair Brownlee', 183, 'M', 74.2, 35, 'Britânica');
-INSERT INTO Pessoa VALUES(3, 'Henri Schoeman', 167, 'M', 65.6, 23, 'Sul-africana');
-INSERT INTO Pessoa VALUES(4, 'Gwen Jorgensen', 165, 'F', 54.0,  27, 'Estadunidense');
-INSERT INTO Pessoa VALUES(5, 'Nicola Spirig Hug', 158, 'F', 49.3, 19, 'Suíça');
-INSERT INTO Pessoa VALUES(6, 'Vicky Holland', 156, 'F', 78.4, 21, 'Britânica');
-INSERT INTO Pessoa VALUES(7, 'João José Pereira', 182, 'M', 82.3, 27, 'Portuguesa');
-INSERT INTO Pessoa VALUES(8, 'Marten van Riel', 186, 'M', 84.5, 24, 'Belga');
-INSERT INTO Pessoa VALUES(9, 'Mario Mola', 158, 'M', 63.1, 22, 'Espanhola');
-INSERT INTO Pessoa VALUES(10, 'Aaron Royle', 184, 'M', 87.4, 30, 'Australiana');
-INSERT INTO Pessoa VALUES(11, 'Alessandro Fabian', 184, 'M', 82.4, 28, 'Italiana');
-INSERT INTO Pessoa VALUES(12, 'Tyler Mislawchuk', 187, 'M', 85.7, 19, 'Canadiana');
-INSERT INTO Pessoa VALUES(13, 'Bárbara Riveros', 156, 'F', 65.4, 29, 'Chilena');
-INSERT INTO Pessoa VALUES(14, 'Emma Moffatt', 162, 'F', 54.7, 21, 'Australiana');
-INSERT INTO Pessoa VALUES(15, 'Claudia Rivas', 153, 'F', 46.6, 31, 'Mexicana');
-INSERT INTO Pessoa VALUES(16, 'Agnieszka Jerzyk', 156, 'F', 56.4, 27, 'Polonesa');
-INSERT INTO Pessoa VALUES(17, 'Sarah True', 161, 'F', 57.1, 34, 'Estadunidense');
-INSERT INTO Pessoa VALUES(18, 'Pâmella Oliveira', 162, 'F', 57.3, 29,  'Brasileira');
-INSERT INTO Pessoa VALUES(19, 'João Pedro Silva', 178, 'M', 74.1, 31, 'Portuguesa');
-INSERT INTO Pessoa VALUES(20, 'Alexander Bryukhankov', 187, 'M', 85.9, 35, 'Russa');
+INSERT INTO Pessoa VALUES(1, 'Jonathan Brownlee', 180, 'M', 78.4, 34, 'GBR');
+INSERT INTO Pessoa VALUES(2, 'Alistair Brownlee', 183, 'M', 74.2, 35, 'GBR');
+INSERT INTO Pessoa VALUES(3, 'Henri Schoeman', 167, 'M', 65.6, 23, 'RSA');
+INSERT INTO Pessoa VALUES(4, 'Gwen Jorgensen', 165, 'F', 54.0,  27, 'USA');
+INSERT INTO Pessoa VALUES(5, 'Nicola Spirig Hug', 158, 'F', 49.3, 19, 'SUI');
+INSERT INTO Pessoa VALUES(6, 'Vicky Holland', 156, 'F', 78.4, 21, 'GBR');
+INSERT INTO Pessoa VALUES(7, 'João José Pereira', 182, 'M', 82.3, 27, 'POR');
+INSERT INTO Pessoa VALUES(8, 'Marten van Riel', 186, 'M', 84.5, 24, 'BEL');
+INSERT INTO Pessoa VALUES(9, 'Mario Mola', 158, 'M', 63.1, 22, 'ESP');
+INSERT INTO Pessoa VALUES(10, 'Aaron Royle', 184, 'M', 87.4, 30, 'AUS');
+INSERT INTO Pessoa VALUES(11, 'Alessandro Fabian', 184, 'M', 82.4, 28, 'ITA');
+INSERT INTO Pessoa VALUES(12, 'Tyler Mislawchuk', 187, 'M', 85.7, 19, 'CAN');
+INSERT INTO Pessoa VALUES(13, 'Bárbara Riveros', 156, 'F', 65.4, 29, 'CHI');
+INSERT INTO Pessoa VALUES(14, 'Emma Moffatt', 162, 'F', 54.7, 21, 'AUS');
+INSERT INTO Pessoa VALUES(15, 'Claudia Rivas', 153, 'F', 46.6, 31, 'MEX');
+INSERT INTO Pessoa VALUES(16, 'Agnieszka Jerzyk', 156, 'F', 56.4, 27, 'POL');
+INSERT INTO Pessoa VALUES(17, 'Sarah True', 161, 'F', 57.1, 34, 'USA');
+INSERT INTO Pessoa VALUES(18, 'Pâmella Oliveira', 162, 'F', 57.3, 29,  'BRA');
+INSERT INTO Pessoa VALUES(19, 'João Pedro Silva', 178, 'M', 74.1, 31, 'POR');
+INSERT INTO Pessoa VALUES(20, 'Alexander Bryukhankov', 187, 'M', 85.9, 35, 'RUS');
 
-INSERT INTO Pessoa VALUES(101, 'Roberto Menescal', 173, 'M', 78.2, 41, 'Brasileira');
-INSERT INTO Pessoa VALUES(102, 'Alberto Barretto', 173, 'M', 70.1, 45, 'Brasileira');
-INSERT INTO Pessoa VALUES(103, 'Tércia Figueiredo', 172, 'M', 64.5, 37, 'Brasileira');
-INSERT INTO Pessoa VALUES(104, 'Kenya Parkinson', 181, 'M', 72.8, 48, 'Neozelandesa');
-INSERT INTO Pessoa VALUES(105, 'Marguerite Moreno', 167, 'M', 55.2, 43, 'Portuguesa');
-INSERT INTO Pessoa VALUES(106, 'Darcy Riggs', 168, 'M', 62.0, 54, 'Estadunidense');
-INSERT INTO Pessoa VALUES(107, 'Anis Ball', 165, 'M', 64.9, 42, 'Botsuana');
-INSERT INTO Pessoa VALUES(108, 'Celia Alvarado', 165, 'M', 52.1,39, 'Colombiana');
+INSERT INTO Pessoa VALUES(101, 'Roberto Menescal', 173, 'M', 78.2, 41, 'BRA');
+INSERT INTO Pessoa VALUES(102, 'Alberto Barretto', 173, 'M', 70.1, 45, 'BRA');
+INSERT INTO Pessoa VALUES(103, 'Tércia Figueiredo', 172, 'M', 64.5, 37, 'BRA');
+INSERT INTO Pessoa VALUES(104, 'Kenya Parkinson', 181, 'M', 72.8, 48, 'NZL');
+INSERT INTO Pessoa VALUES(105, 'Marguerite Moreno', 167, 'M', 55.2, 43, 'POR');
+INSERT INTO Pessoa VALUES(106, 'Darcy Riggs', 168, 'M', 62.0, 54, 'USA');
+INSERT INTO Pessoa VALUES(107, 'Anis Ball', 165, 'M', 64.9, 42, 'BWA');
+INSERT INTO Pessoa VALUES(108, 'Celia Alvarado', 165, 'M', 52.1,39, 'COL');
 
 
 
-INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(201, 'Pedro Castro', 'M', 'Portuguesa');
-INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(202, 'Beatriz Rocha', 'F', 'Brasileira');
-INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(203, 'Bianca Tamburini', 'F', 'Italiana');
-INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(204, 'Louis Murphy', 'M', 'Britânica');
-INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(205, 'Marvin Irwin', 'M', 'Britânica');
+INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(201, 'Pedro Castro', 'M', 'POR');
+INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(202, 'Beatriz Rocha', 'F', 'BRA');
+INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(203, 'Bianca Tamburini', 'F', 'ITA');
+INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(204, 'Louis Murphy', 'M', 'GBR');
+INSERT INTO Pessoa(IdPessoa, Nome, Genero, Nacionalidade) VALUES(205, 'Marvin Irwin', 'M', 'GBR');
 
 
 INSERT INTO Competicao VALUES(501, '2016-08-18',  'M');
 INSERT INTO Competicao VALUES(502, '2016-08-20',  'F');
   
 
-INSERT INTO ComitivaOlimpica VALUES(1, 'Portugal', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(2, 'Grã-Bretanha', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(3, 'Canadá', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(4, 'Brasil', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(5, 'Estados Unidos', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(6, 'México', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(7, 'Austrália', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(8, 'Itália', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(9, 'Polônia', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(10, 'Bélgica', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(11, 'Chile', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(12, 'Espanha', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(13, 'África do Sul', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(14, 'Suíça', 'Triatlo');
-INSERT INTO ComitivaOlimpica VALUES(15, 'Rússia', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(1, 'POR', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(2, 'GBR', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(3, 'CAN', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(4, 'BRA', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(5, 'USA', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(6, 'MEX', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(7, 'AUS', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(8, 'ITA', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(9, 'POL', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(10, 'BEL', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(11, 'CHI', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(12, 'ESP', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(13, 'RSA', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(14, 'SUI', 'Triatlo');
+INSERT INTO ComitivaOlimpica VALUES(15, 'RUS', 'Triatlo');
 
 INSERT INTO Atleta VALUES(2, 1, 501);
 INSERT INTO Atleta VALUES(2, 2, 501);
